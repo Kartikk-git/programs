@@ -19,14 +19,16 @@ class stats
         cout<<" B : "<<b<<endl;
     }
 
-    static void print()
+    static void print()       //static member function
     {
-        //cout<<" A : "<<a<<endl; not accessible here as it's static member function
+        //cout<<" A : "<<a<<endl; error: static member function cannot access non-static data member
         cout<<" B : "<<b<<endl;
     }
 };
 
-int stats :: b=0; //scope variable operator
+int stats :: b=0; //static data member initialization
+
+
 int main()
 {
     stats obj(10,20);
